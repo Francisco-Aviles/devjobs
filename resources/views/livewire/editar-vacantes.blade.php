@@ -84,9 +84,9 @@
 
         
         <div>
-            <x-input-label for="imagen" :value="__('Imagen')" />
+            <x-input-label for="imagen_nueva" :value="__('Imagen')" />
             <x-text-input 
-            id="imagen" 
+            id="imagen_nueva" 
             class="block mt-1 w-full" 
             type="file" 
             wire:model.live="imagen_nueva" 
@@ -95,8 +95,8 @@
             
             <div class="my-5 w-80">
                 @if ($imagen_nueva)
-                Imagen Nueva:
-                <img src="{{ $imagen_nueva->temporaryUrl() }}">
+                    Imagen Nueva:
+                    <img src="{{ $imagen_nueva->temporaryUrl()}}">
                 @endif
             </div>
             

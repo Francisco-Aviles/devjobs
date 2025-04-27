@@ -7,9 +7,11 @@ use App\Models\Salario;
 use App\Models\Vacante;
 use Illuminate\Support\Carbon;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class EditarVacantes extends Component
 {
+    use WithFileUploads;
     //Creamos las variables de los inputs para pasarles su informacion
     public $vacante_id; //no se usa 'id' ya que esta reservado por Livewire
     public $titulo;
@@ -51,7 +53,7 @@ class EditarVacantes extends Component
 
         //Si hay una nueva imagen
         if ($this->imagen_nueva) {
-            $imagen = $this->imagen->store('public/vacantes');
+            $imagen = $this->imagen_nueva->store('public/vacantes');
             $datos['imagen'] = str_replace('public/vacantes/', '', $imagen);
         }
 

@@ -16,6 +16,7 @@
             <div class="mb-4">
                 <x-input-label for="cv" :value="__('Curriculum u Hoja de Vida')"/>
                 <x-text-input  wire:model.live="cv" id="cv" type="file" accept=".pdf"    class="block mt-1 w-full"/>
+                <div wire:loading wire:target="cv" class="uppercase border border-green-600 bg-green-100 text-green-600 font-bold p-2 my-5">Subiendo archivo...</div>
             </div>
 
             @error('cv')

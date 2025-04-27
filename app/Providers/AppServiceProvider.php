@@ -28,5 +28,6 @@ class AppServiceProvider extends ServiceProvider
         //         ->subject('Mensaje de prueba en el asunto');
         // });
 
+
     }
 }
